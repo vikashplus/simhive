@@ -1,0 +1,39 @@
+[submodule "simhive/Adroit"]
+	path = simhive/Adroit
+	url = https://github.com/vikashplus/Adroit.git
+[submodule "simhive/furniture_sim"]
+	path = simhive/furniture_sim
+	url = https://github.com/vikashplus/furniture_sim.git
+[submodule "simhive/franka_sim"]
+	path = simhive/franka_sim
+	url = https://github.com/vikashplus/franka_sim.git
+[submodule "simhive/scene_sim"]
+	path = simhive/scene_sim
+	url = https://github.com/vikashplus/scene_sim.git
+[submodule "simhive/sawyer_sim"]
+	path = simhive/sawyer_sim
+	url = https://github.com/vikashplus/sawyer_sim.git
+[submodule "simhive/fetch_sim"]
+	path = simhive/fetch_sim
+	url = https://github.com/vikashplus/fetch_sim.git
+[submodule "simhive/dmanus_sim"]
+	path = simhive/dmanus_sim
+	url = https://github.com/vikashplus/dmanus_sim.git
+[submodule "simhive/YCB_sim"]
+	path = simhive/YCB_sim
+	url = https://github.com/vikashplus/YCB_sim.git
+[submodule "simhive/object_sim"]
+	path = simhive/object_sim
+	url = https://github.com/vikashplus/object_sim.git
+[submodule "simhive/trifinger_sim"]
+	path = simhive/trifinger_sim
+	url = https://github.com/vikashplus/trifinger_sim.git
+[submodule "simhive/robel_sim"]
+	path = simhive/robel_sim
+	url = https://github.com/vikashplus/robel_sim.git
+[submodule "simhive/robotiq_sim"]
+	path = simhive/robotiq_sim
+	url = https://github.com/vikashplus/robotiq_sim.git
+[submodule "simhive/myo_sim"]
+	path = simhive/myo_sim
+	url = https://github.com/MyoHub/myo_sim.git
