@@ -8,6 +8,7 @@ try:
 except ImportError as e:
     raise ImportError("(HINT: you need to install mujoco_py, and also perform the setup instructions here: https://github.com/openai/mujoco-py/.)")
 
+curr_dir = os.path.dirname(os.path.abspath(__file__))
 
 class TestSims(unittest.TestCase):
 
@@ -32,7 +33,8 @@ class TestSims(unittest.TestCase):
 
 
     def test_adroit_sim(self):
-        model_paths = glob.glob("../simhive/Adroit/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/Adroit/*.xml")
+        print(model_paths)
         print("\nSimHive: Tesing Adroit")
         for model_path in model_paths:
             print("\t{}".format(model_path))
@@ -40,7 +42,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_dmanus_sim(self):
-        model_paths = glob.glob("../simhive/dmanus_sim/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/dmanus_sim/*.xml")
         print("\nSimHive: Tesing D'Manus")
         for model_path in model_paths:
             print("\t{}".format(model_path))
@@ -48,7 +50,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_fetch_sim(self):
-        model_paths = glob.glob("../simhive/fetch_sim/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/fetch_sim/*.xml")
         print("\nSimHive: Tesing Fetch")
         for model_path in model_paths:
             print("\t{}".format(model_path))
@@ -56,7 +58,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_franka_sim(self):
-        model_paths = glob.glob("../simhive/franka_sim/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/franka_sim/*.xml")
         print("\nSimHive: Tesing Franka")
         for model_path in model_paths:
             print("\t{}".format(model_path))
@@ -64,7 +66,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_furniture_sim(self):
-        model_paths = glob.glob("../simhive/furniture_sim/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/furniture_sim/*.xml")
         print("\nSimHive: Tesing Furniture Sim")
         for model_path in model_paths:
             print("\t{}".format(model_path))
@@ -72,7 +74,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_myo_sim(self):
-        model_paths = glob.glob("../simhive/myo_sim/*/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/myo_sim/*/*.xml")
 
         print("\nSimHive: Tesing Myo")
         for model_path in model_paths:
@@ -81,7 +83,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_object_sim(self):
-        model_paths = glob.glob("../simhive/object_sim/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/object_sim/*.xml")
 
         print("\nSimHive: Tesing Objects")
         for model_path in model_paths:
@@ -90,7 +92,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_robel_sim(self):
-        model_paths = glob.glob("../simhive/robel_sim/d*/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/robel_sim/d*/*.xml")
 
         print("\nSimHive: Tesing ROBEL")
         for model_path in model_paths:
@@ -99,7 +101,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_robotiq_sim(self):
-        model_paths = glob.glob("../simhive/robotiq_sim/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/robotiq_sim/*.xml")
 
         print("\nSimHive: Tesing RobotiQ")
         for model_path in model_paths:
@@ -108,7 +110,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_sawyer_sim(self):
-        model_paths = glob.glob("../simhive/sawyer_sim/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/sawyer_sim/*.xml")
 
         print("\nSimHive: Tesing Sawyer")
         for model_path in model_paths:
@@ -117,7 +119,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_scene_sim(self):
-        model_paths = glob.glob("../simhive/scene_sim/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/scene_sim/*.xml")
 
         print("\nSimHive: Tesing Scene")
         for model_path in model_paths:
@@ -126,7 +128,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_trifinger_sim(self):
-        model_paths = glob.glob("../simhive/trifinger_sim/trifinger.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/trifinger_sim/trifinger.xml")
 
         print("\nSimHive: Tesing Trifinger")
         for model_path in model_paths:
@@ -135,7 +137,7 @@ class TestSims(unittest.TestCase):
 
 
     def test_ycb_sim(self):
-        model_paths = glob.glob("../simhive/YCB_sim/*.xml")
+        model_paths = glob.glob(curr_dir+"/../simhive/YCB_sim/*.xml")
 
         print("\nSimHive: Tesing YCB")
         for model_path in model_paths:
