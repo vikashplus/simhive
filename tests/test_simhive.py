@@ -2,11 +2,7 @@ import unittest
 import os
 import glob
 
-try:
-    import mujoco_py
-    from mujoco_py import load_model_from_path, MjSim, load_model_from_xml
-except ImportError as e:
-    raise ImportError("(HINT: you need to install mujoco_py, and also perform the setup instructions here: https://github.com/openai/mujoco-py/.)")
+import mujoco
 
 curr_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -23,13 +19,13 @@ class TestSims(unittest.TestCase):
                 fullpath = os.path.join(os.path.dirname(__file__), model_path)
             if not os.path.exists(fullpath):
                 raise IOError("File %s does not exist" % fullpath)
-            model = load_model_from_path(fullpath)
+            model = mujoco.MjModel.from_xml_path(fullpath)
         elif model_xmlstr:
-            model = load_model_from_xml(model_xmlstr)
+            model = mujoco.MjModel.from_xml_string(model_xmlstr)
         else:
             raise TypeError("Both model_path and model_xmlstr can't be None")
 
-        return MjSim(model)
+        return model
 
 
     def test_adroit_sim(self):
@@ -147,4 +143,3 @@ class TestSims(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
